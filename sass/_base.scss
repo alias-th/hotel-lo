@@ -1,0 +1,51 @@
+:root {
+  --color-primary-1: #022e57;
+  --color-primary-2: #005a8d;
+  --color-primary-3: #ff96ad;
+  --color-primary-4: #fff5fd;
+  --color-primary-1-light: #294661;
+  --color-primary-2-light: #2d698b;
+  --color-primary-3-light: #ffd1db;
+  --color-primary-4-light: #fafafa;
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+}
+
+$bp-largest: 93.75em; //1500/16
+$bp-large: 73em; //1170/16
+$bp-medium: 56.25em; //900/16
+$bp-small: 45.625em; //730/16
+$bp-smallest: 37em; //580/16
+$bp-smallest-mb-s: 24.375em; //580/16
+$bp-smallest-zoom: 17.5em; //580/16
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  //   1rem  = 10px /// 10/16 = 65.5
+
+  @media (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media (max-width: $bp-smallest) {
+    font-size: 40%;
+  }
+  @media (max-width: $bp-smallest-zoom) {
+    font-size: 15%;
+  }
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: var(--color-primary-3-light);
+}
